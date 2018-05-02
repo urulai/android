@@ -3,6 +3,9 @@ package io.github.urulai.mediaplayerapp;
 import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
 import android.content.res.Resources;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,10 +45,10 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
 
                 if (isStopped) {
                     try {
+                        setResource();
                         mMediaPlayer.prepare();
                         isStopped = false;
-                    }
-                    catch(IOException ex) {
+                    } catch (IOException ex) {
                         Log.d(TAG, "Exception occurred while trying Mediaplayer prepare " + ex.getMessage());
                     }
                 }
@@ -66,6 +69,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
                 mMediaPlayer.stop();
                 isStopped = true;
                 btnPlay.setText("Play");
+
+                mMediaPlayer.reset();
             }
         });
     }
@@ -79,7 +84,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     protected void onStop() {
         super.onStop();
 
-        if(mMediaPlayer != null)
+        if (mMediaPlayer != null)
             mMediaPlayer.release();
 
         mMediaPlayer = null;
@@ -95,21 +100,25 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
         Log.d(TAG, "Surface changed");
     }
 
+    private void setResource() {
+        try {
+            AssetFileDescriptor afd = mResources.openRawResourceFd(ASSET_ID);
+            mMediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
+            afd.close();
+        } catch (IOException ex) {
+            Log.d(TAG, "Exception: " + ex.getMessage());
+        }
+    }
+
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
         mResources = getResources();
         mMediaPlayer = new MediaPlayer();
 
-        try {
-            AssetFileDescriptor afd = mResources.openRawResourceFd(ASSET_ID);
-            mMediaPlayer.setDataSource(afd.getFileDescriptor(), afd.getStartOffset(), afd.getLength());
-            afd.close();
-        } catch (Exception e) {
-            Log.e(TAG, e.getMessage(), e);
-        }
-
+        setResource();
         mMediaPlayer.setDisplay(mSurfaceHolder);
+
         try {
             mMediaPlayer.prepare();
         } catch (IOException t) {
