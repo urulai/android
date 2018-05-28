@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context="io.github.urulai.layoutexample.MainActivity">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lblFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="First Name"
+            android:textAllCaps="false"
+            android:textColor="?attr/actionModeSplitBackground"
+            android:textSize="@dimen/textsize"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lblFirstName"
+            android:layout_alignBottom="@+id/lblFirstName"
+            android:layout_marginStart="@dimen/space_btw_label_field"
+            android:layout_toEndOf="@+id/lblFirstName"
+            android:hint="Subramanian"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/lblLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/lblFirstName"
+            android:layout_below="@id/lblFirstName"
+            android:layout_marginTop="@dimen/space_btw_rows"
+            android:text="Last Name"
+            android:textAllCaps="false"
+            android:textColor="?attr/actionModeSplitBackground"
+            android:textSize="@dimen/textsize"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lblLastName"
+            android:layout_alignBottom="@+id/lblLastName"
+            android:layout_alignStart="@+id/editTextFirstName"
+            android:hint="Narasimhan"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/lblPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/lblFirstName"
+            android:layout_below="@id/lblLastName"
+            android:layout_marginTop="@dimen/space_btw_rows"
+            android:text="Phone"
+            android:textAllCaps="false"
+            android:textColor="?attr/actionModeSplitBackground"
+            android:textSize="@dimen/textsize"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/spinnerGender"
+            android:layout_alignBaseline="@id/lblPhone"
+            android:layout_alignStart="@+id/editTextLastName"
+            android:layout_below="@id/editTextLastName"
+            android:hint="2222222"
+            android:inputType="phone"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <TextView
+            android:id="@+id/lblGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/lblFirstName"
+            android:layout_below="@id/lblPhone"
+            android:layout_marginTop="@dimen/space_btw_rows"
+            android:text="Gender"
+            android:textColor="?attr/actionModeSplitBackground"
+            android:textSize="@dimen/textsize"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/lblGender"
+            android:layout_alignStart="@id/editTextFirstName"
+            android:entries="@array/genderentries" />
+
+        <TextView
+            android:id="@+id/lblAgreeToTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/lblGender"
+            android:layout_below="@+id/lblGender"
+            android:layout_marginTop="@dimen/space_btw_rows"
+            android:text="Make my Profile Public"
+            android:textColor="?attr/actionModeSplitBackground"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <Switch
+            android:id="@+id/switch_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lblAgreeToTerms"
+            android:layout_alignStart="@+id/editTextFirstName"
+            android:layout_below="@id/spinnerGender"
+            android:textColor="@color/colorPrimaryDark"
+            android:textOff="no"
+            android:textOn="yes"
+            android:textSize="@dimen/textsize"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lblAgreeToTerms"
+            android:onClick="onRegisterClicked"
+            android:text="Register"
+            android:layout_marginTop="@dimen/space_btw_rows"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

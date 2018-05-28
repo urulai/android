@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_btw_label_field">50dp</dimen>
+    <dimen name="textsize">24sp</dimen>
+    <dimen name="textsize_sidenotes">18sp</dimen>
+    <dimen name="space_btw_rows">15dp</dimen>
+</resources>
