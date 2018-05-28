@@ -4,8 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/background"
     tools:context="io.github.urulai.layoutexample.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_btw_heading"
+        android:layout_marginBottom="@dimen/space_btw_heading"
+        android:text="@string/login_screen_heading"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/textSize_heading"
+        android:textStyle="bold" />
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -71,14 +83,22 @@
             android:textSize="@dimen/textsize"
             android:textStyle="bold" />
 
+        <Spinner
+            android:id="@+id/countryCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/editTextFirstName"
+            android:layout_alignBaseline="@id/lblPhone"
+            android:layout_below="@id/lblLastName"
+            android:layout_marginTop="@dimen/space_btw_rows"
+            android:entries="@array/countryCodes" />
+
         <EditText
             android:id="@+id/editTextPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/spinnerGender"
+            android:layout_toEndOf="@id/countryCode"
             android:layout_alignBaseline="@id/lblPhone"
-            android:layout_alignStart="@+id/editTextLastName"
-            android:layout_below="@id/editTextLastName"
             android:hint="2222222"
             android:inputType="phone"
             android:textColor="@android:color/holo_blue_dark" />
@@ -133,10 +153,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/lblAgreeToTerms"
-            android:onClick="onRegisterClicked"
-            android:text="Register"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/space_btw_rows"
-            android:layout_centerHorizontal="true"/>
+            android:onClick="onRegisterClicked"
+            android:text="Register" />
 
 
     </RelativeLayout>

@@ -3,5 +3,7 @@
     <dimen name="space_btw_label_field">50dp</dimen>
     <dimen name="textsize">24sp</dimen>
     <dimen name="textsize_sidenotes">18sp</dimen>
+    <dimen name="textSize_heading">28sp</dimen>
     <dimen name="space_btw_rows">15dp</dimen>
+    <dimen name="space_btw_heading">40dp</dimen>
 </resources>

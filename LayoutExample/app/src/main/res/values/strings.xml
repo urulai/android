@@ -1,8 +1,17 @@
 <resources>
     <string name="app_name">DWF</string>
 
+    <string name="login_screen_heading">Welcome to DWF</string>
+
     <string-array name="genderentries">
         <item>Male</item>
         <item>Female</item>
+    </string-array>
+
+    <string-array name="countryCodes">
+        <item>+61</item>
+        <item>+64</item>
+        <item>+65</item>
+        <item>+91</item>
     </string-array>
 </resources>
