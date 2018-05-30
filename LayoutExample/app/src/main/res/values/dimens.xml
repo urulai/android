@@ -6,4 +6,5 @@
     <dimen name="textSize_heading">28sp</dimen>
     <dimen name="space_btw_rows">15dp</dimen>
     <dimen name="space_btw_heading">40dp</dimen>
+
 </resources>

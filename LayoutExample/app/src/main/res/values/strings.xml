@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">DWF</string>
 
-    <string name="login_screen_heading">Welcome to DWF</string>
+    <string name="login_screen_heading">Welcome to DessertLand</string>
+
+    <string name="enter">Enter</string>
+
+    <string name="fields_empty_err_msg">Please fill up the empty fields</string>
+
+    <string name="thank_you_note">Thanks for visiting DessertLand</string>
+
+    <string name="phone_hint">55124214</string>
 
     <string-array name="genderentries">
         <item>Male</item>
@@ -13,5 +21,19 @@
         <item>+64</item>
         <item>+65</item>
         <item>+91</item>
+    </string-array>
+
+    <string-array name="listItems">
+        <item>Donuts</item>
+        <item>Eclair</item>
+        <item>Pumpkin Pie</item>
+        <item>Mars</item>
+        <item>Snickers</item>
+        <item>Marshmallow</item>
+        <item>Nougat</item>
+        <item>Oreo</item>
+        <item>JellyBean</item>
+        <item>Kitkat</item>
+        <item>Lollipop</item>
     </string-array>
 </resources>
