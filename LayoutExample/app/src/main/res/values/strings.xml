@@ -36,4 +36,24 @@
         <item>Kitkat</item>
         <item>Lollipop</item>
     </string-array>
+
+
+    <string-array name="listItemsDescription">
+        <item>Doughnuts are usually deep fried from a flour dough, and typically either ring-shaped or a number of shapes without a hole, and often filled, but can also be ball-shaped ("doughnut holes").</item>
+        <item>An éclair is an oblong pastry made with choux dough filled with a cream and topped with icing. The dough, which is the same as that used for profiterole, is typically piped into an oblong shape with a pastry bag and baked until it is crisp and hollow inside.</item>
+        <item>Pumpkin pie is a dessert pie with a spiced, pumpkin-based custard filling. The pumpkin is a symbol of harvest time, and pumpkin pie is often eaten during the fall and early winter.</item>
+        <item>Mars is a British chocolate bar. It was first manufactured in 1932 in England,[2] and was advertised to the trade as being made with Cadbury's chocolate couverture. Mars is also sold in the United States, under the "Milky Way" name.</item>
+        <item>Snickers is a brand name chocolate bar made by the American company Mars, Incorporated. Consisting of nougat topped with caramel and peanuts, enrobed in milk chocolate.</item>
+        <item>A marshmallow is a sugar-based candy or type of sweets that in its modern form typically consists of sugar, water and gelatin whipped to a squishy consistency, molded into small cylindrical pieces, and coated with corn starch.</item>
+        <item>Nougat is a family of confections made with sugar or honey, roasted nuts (almonds, walnuts, pistachios, hazelnuts, and macadamia nuts are common), whipped egg whites, and sometimes chopped candied fruit.</item>
+        <item>Oreo is a commercial brand of cookie usually consisting of two chocolate wafers with a sweet crème filling in between, and (as of 1974) is marketed as "Chocolate Sandwich Cookies" on the package.</item>
+        <item>Jelly beans are small bean-shaped sugar candies with soft candy shells and thick gel interiors. The confection is vended in a wide variety of colors and flavors, and is made primarily of sugar.</item>
+        <item>Kit Kat is a chocolate-covered wafer bar confection created by Rowntree's of York, United Kingdom, and is now produced globally by Nestlé.</item>
+        <item>A lollipop is a type of sugar candy usually consisting of hard candy mounted on a stick and intended for sucking or licking.</item>
+    </string-array>
+
+    <string-array name="attribution">
+        <item>Public Domain - Kitkat US Logo</item>
+        <item>Sasha Wolff - https://www.flickr.com/people/27786290@N05 - Lollipop</item>
+    </string-array>
 </resources>

@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.content.Context;
+import android.view.inputmethod.InputMethodManager;
+import android.app.Activity;
 
 import java.util.BitSet;
 
@@ -32,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
         int id = view.getId();
 
         if (id == R.id.register) {
+
+            // Hide keyboard
+            InputMethodManager imm = (InputMethodManager) getSystemService(Activity.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
 
             final int BITSET_SIZE = 3;
             BitSet bitsetVal = new BitSet(BITSET_SIZE);
