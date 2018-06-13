@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Choose a Cuisine</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="what_is_cuisine">Cuisine?</string>
+    <string name="cuisine_text">A cuisine is a style of cooking characterized
+        by distinctive ingredients, techniques and dishes, and usually associated
+        with a specific culture or geographic region. A cuisine is primarily
+        influenced by the ingredients that are available locally or through trade.</string>
+</resources>
