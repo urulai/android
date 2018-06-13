@@ -2,6 +2,7 @@ package io.github.urulai.fragmentexample;
 
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
@@ -18,6 +19,8 @@ import android.widget.ListView;
 public class CuisineSelector extends ListFragment {
 
     private MainActivity parentActivity = null;
+
+    private View prevSelectedItem = null;
 
     public CuisineSelector() {
         // Required empty public constructor
@@ -64,7 +67,17 @@ public class CuisineSelector extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        if(parentActivity != null)
+        if(parentActivity != null) {
+
+            if(v != null) {
+                if(prevSelectedItem != null)
+                    prevSelectedItem.setBackgroundColor(Color.parseColor("#FFFFFF"));
+
+                v.setBackgroundColor(Color.parseColor("#999999"));
+                prevSelectedItem = v;
+            }
             parentActivity.onListItemClicked((int) id);
+        }
+
     }
 }

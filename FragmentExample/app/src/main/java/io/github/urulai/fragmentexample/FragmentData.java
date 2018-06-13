@@ -47,7 +47,7 @@ public class FragmentData {
                     "ethnic groups among other things have all helped shape Sri Lankan cuisine."),
             new FragmentData("Turkish", "Turkish cuisine is largely the heritage of Ottoman cuisine, which " +
                     "can be described as a fusion and refinement of Central Asian, Middle Eastern, Eastern " +
-                    "European and Balkan cuisines")
+                    "European and Balkan cuisines.")
     };
 
     private FragmentData(String n, String d) {
