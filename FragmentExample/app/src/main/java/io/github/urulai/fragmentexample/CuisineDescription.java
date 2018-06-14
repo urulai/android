@@ -1,15 +1,16 @@
 package io.github.urulai.fragmentexample;
 
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
+import android.content.Context;
+import android.util.Log;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,6 +18,8 @@ import org.w3c.dom.Text;
 public class CuisineDescription extends Fragment {
 
     private int index = 0;
+
+    private final String TAG = "CuisineDescriptionFragment";
 
     public CuisineDescription() {
         // Required empty public constructor
@@ -32,17 +35,17 @@ public class CuisineDescription extends Fragment {
 
     public void setIndex(int id) {
 
-        if(id >= FragmentData.items.length)
+        if (id >= FragmentData.items.length)
             return;
 
         index = id;
 
         View view = getView();
 
-        if(view != null) {
+        if (view != null) {
             FragmentData item = FragmentData.items[(int) index];
 
-            if(item != null) {
+            if (item != null) {
                 TextView title = (TextView) view.findViewById(R.id.title);
                 title.setText(item.getName());
 
@@ -55,5 +58,17 @@ public class CuisineDescription extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        Log.d(TAG, "Attached");
+
+        View view = getView();
+        if (view != null) {
+            Log.d(TAG, "View is available");
+        }
     }
 }
