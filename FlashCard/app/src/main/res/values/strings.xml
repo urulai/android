@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlashCard</string>
+    <string name="english">English</string>
+    <string name="tamil">தமிழ்</string>
+    <string name="train">Train</string>
+    <string name="train_tamil">ரயில்</string>
+</resources>
