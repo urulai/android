@@ -1,4 +1,5 @@
-TV applications using leanback launcher.
+MediaPlayerAndroid
 
-1) Media Player using SurfaceView.
+This is a TV application using leanback launcher.
+Media Player uses SurfaceView for video playback.
 Input video from https://vimeo.com/62735015 by Mitch Martinez.
